@@ -40,6 +40,9 @@ namespace TIMER
             this.hard = new System.Windows.Forms.RadioButton();
             this.medium = new System.Windows.Forms.RadioButton();
             this.easy = new System.Windows.Forms.RadioButton();
+            this.nickname = new System.Windows.Forms.TextBox();
+            this.nicknametext = new System.Windows.Forms.Label();
+            this.leaderbord = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -110,7 +113,7 @@ namespace TIMER
             // 
             this.hard.AutoSize = true;
             this.hard.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.hard.Location = new System.Drawing.Point(376, 304);
+            this.hard.Location = new System.Drawing.Point(421, 313);
             this.hard.Name = "hard";
             this.hard.Size = new System.Drawing.Size(64, 17);
             this.hard.TabIndex = 2;
@@ -122,7 +125,7 @@ namespace TIMER
             // medium
             // 
             this.medium.AutoSize = true;
-            this.medium.Location = new System.Drawing.Point(376, 327);
+            this.medium.Location = new System.Drawing.Point(421, 336);
             this.medium.Name = "medium";
             this.medium.Size = new System.Drawing.Size(62, 17);
             this.medium.TabIndex = 2;
@@ -134,7 +137,7 @@ namespace TIMER
             // easy
             // 
             this.easy.AutoSize = true;
-            this.easy.Location = new System.Drawing.Point(376, 350);
+            this.easy.Location = new System.Drawing.Point(421, 359);
             this.easy.Name = "easy";
             this.easy.Size = new System.Drawing.Size(56, 17);
             this.easy.TabIndex = 2;
@@ -143,19 +146,53 @@ namespace TIMER
             this.easy.UseVisualStyleBackColor = true;
             this.easy.CheckedChanged += new System.EventHandler(this.easy_CheckedChanged);
             // 
+            // nickname
+            // 
+            this.nickname.Location = new System.Drawing.Point(68, 350);
+            this.nickname.MaxLength = 8;
+            this.nickname.Name = "nickname";
+            this.nickname.Size = new System.Drawing.Size(117, 20);
+            this.nickname.TabIndex = 3;
+            this.nickname.TabStop = false;
+            this.nickname.Text = "Ник";
+            // 
+            // nicknametext
+            // 
+            this.nicknametext.AutoSize = true;
+            this.nicknametext.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nicknametext.Location = new System.Drawing.Point(86, 325);
+            this.nicknametext.Name = "nicknametext";
+            this.nicknametext.Size = new System.Drawing.Size(79, 18);
+            this.nicknametext.TabIndex = 1;
+            this.nicknametext.Text = "Ваш Ник";
+            // 
+            // leaderbord
+            // 
+            this.leaderbord.AutoSize = true;
+            this.leaderbord.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.leaderbord.Location = new System.Drawing.Point(502, 336);
+            this.leaderbord.Name = "leaderbord";
+            this.leaderbord.Size = new System.Drawing.Size(154, 18);
+            this.leaderbord.TabIndex = 1;
+            this.leaderbord.Text = "Таблица лидеров";
+            this.leaderbord.Click += new System.EventHandler(this.leaderbord_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 389);
-            this.Controls.Add(this.point);
+            this.Controls.Add(this.nickname);
             this.Controls.Add(this.easy);
             this.Controls.Add(this.medium);
             this.Controls.Add(this.hard);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.points1);
             this.Controls.Add(this.Points);
+            this.Controls.Add(this.leaderbord);
+            this.Controls.Add(this.nicknametext);
             this.Controls.Add(this.mmss);
+            this.Controls.Add(this.point);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -170,12 +207,15 @@ namespace TIMER
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label mmss;
         private System.Windows.Forms.Label point;
-        private System.Windows.Forms.Label Points;
-        private System.Windows.Forms.Label points1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.RadioButton hard;
         private System.Windows.Forms.RadioButton medium;
         private System.Windows.Forms.RadioButton easy;
+        private System.Windows.Forms.TextBox nickname;
+        private System.Windows.Forms.Label nicknametext;
+        private System.Windows.Forms.Label leaderbord;
+        public System.Windows.Forms.Label Points;
+        public System.Windows.Forms.Label points1;
     }
 }
 
